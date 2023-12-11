@@ -9,7 +9,7 @@ const router = require('./routes/index');
 const db = require('./config/mongoose');
 
 app.use(express.urlencoded({ extended: true })); 
-app.use('/products', router);
+app.use('/', router);
 
 app.listen(port, (err) => {
 
