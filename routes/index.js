@@ -2,7 +2,6 @@ const express = require('express')
 const apiController = require('../controllers/apiController')
 const router = express.Router();
 
-console.log('Router connected success');
 // get req to find all products
 router.get('/' , apiController.products);
 
@@ -12,8 +11,7 @@ router.post('/create' , apiController.createProducts);
 // delet request to deleting a specific id of product
 router.delete('/:id' , apiController.deleteProduct);
 
-// post request to update product Quentity of a seecific product
+//post request to update product Quentity of a seecific product
 router.post('/:id/update_quentity/' , apiController.updateProduct)
 
-
-module.exports = router ;
+module.exports = router;

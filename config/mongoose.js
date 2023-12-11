@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 // connect with database
-mongoose.connect(process.env.DB,{ useNewUrlParser: true });
+mongoose.connect('mongodb://127.0.0.1/APICALL',{ useNewUrlParser: true });
 
 const db =  mongoose.connection;
 // if in connect any error
@@ -10,9 +10,7 @@ db.on('error' , console.error.bind('error inconnect db'));
 db.once('open' ,()=>{
     console.log("mongoDB connected Successfully");
 
-})
+});
 
-console.log(process.env.DB)
-console.log("Connected")
+
 module.exports = db;
-
